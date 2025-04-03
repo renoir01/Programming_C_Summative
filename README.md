@@ -5,13 +5,13 @@ This repository contains solutions for the Agricultural Technology Programming A
 ## Project Structure
 
 ```markdown
-C_Programming_Assessment/
+Programming_C_Summative/
 ├── src/
 │   ├── Q1/  # Student Management for Agricultural Programs
 │   ├── Q2/  # Agricultural IoT Automation System
 │   ├── Q3/  # Multithreaded Agricultural Sensor Data Processing
-│   ├── Q4/  # Agricultural Data Storage and Computation
-│   └── Q5/  # Agricultural Record Management System
+│   ├── Q4/  # Student Records System
+│   └── Q5/  # Agricultural Employee Management System
 └── README.md
 ```
 
@@ -74,16 +74,22 @@ gcc -o multithreaded_sum multithreaded_sum.c -lpthread
 ./multithreaded_sum
 ```
 
-## Question 4: Agricultural Data Storage and Computation
+## Question 4: Student Records System
 
-This solution uses structures to represent agricultural students and their grades for 5 courses related to agricultural technology, with functionality to input data, calculate averages, and store the information in a file.
+This solution uses structures to represent students and their grades for 5 specific courses as required by the assessment. It provides functionality to input data, calculate averages, and store the information in a file.
 
 ### Q4 Features
 
-- Structures for agricultural students and courses
+- Structures for students and courses using typedef
+- Support for the 5 required courses:
+  - Data Structures in C
+  - Mobile Application Development
+  - Programming in C#
+  - Machine Learning Techniques
+  - Introduction to Blockchain Development
 - User input validation
-- File storage and retrieval
-- Average grade calculation for agricultural technology courses
+- File storage with each student on a separate row
+- Average grade calculation
 
 ### Q4 Compilation and Execution
 
@@ -93,25 +99,27 @@ gcc -o student_records student_records.c
 ./student_records
 ```
 
-## Question 5: Agricultural Record Management System
+## Question 5: Agricultural Employee Management System
 
-This solution implements a C program with bash script integration to manage agricultural employee and crop records, allowing for storing and retrieving details relevant to farm management.
+This solution implements a C program with bash script integration to manage agricultural technology employees, allowing for storing and retrieving employee details with agricultural technology roles and departments.
 
 ### Q5 Features
 
-- Agricultural data structures (crop yields, field conditions, employee details)
-- Input validation
-- File-based storage
-- Bash script wrapper for better user experience
+- Agricultural technology employee data structures
+- Input validation for email, age, and salary
+- Agricultural technology roles and departments
+- File-based storage with proper formatting
+- Bash script wrapper for improved user experience
+- Reporting functionality for agricultural workforce analysis
 
 ### Q5 Compilation and Execution
 
 ```bash
 cd src/Q5
-gcc -o agricultural_management agricultural_management.c
-# To run directly:
-./agricultural_management store    # To store agricultural data
-./agricultural_management retrieve # To retrieve agricultural data
+# First make the bash script executable
+chmod +x employee_management.sh
+# Then run the script
+./employee_management.sh
 ```
 
 ## Agricultural Technology Applications
@@ -121,8 +129,8 @@ These programs demonstrate various applications of computer programming in agric
 1. **Student Management**: For educational institutions focusing on agricultural technology
 2. **IoT Automation**: For smart farming and precision agriculture
 3. **Sensor Data Processing**: For analyzing field conditions and making data-driven decisions
-4. **Data Storage**: For maintaining agricultural research and student records
-5. **Record Management**: For efficient farm operations and crop management
+4. **Data Storage**: For maintaining educational records with potential agricultural applications
+5. **Employee Management**: For agricultural technology companies and research institutions
 
 ## Future Enhancements
 
@@ -144,3 +152,4 @@ These programs demonstrate various applications of computer programming in agric
 - Each solution is independent and can be compiled and run separately
 - The solutions include input validation and error handling
 - Comments are included throughout the code to explain the implementation details
+- The repository structure follows the assessment requirements with each question in its own directory
