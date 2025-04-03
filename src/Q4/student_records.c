@@ -150,24 +150,31 @@ void saveToFile(Student *students, int n, const char *filename) {
     }
     
     // Write header
-    fprintf(file, "%-30s", "Full Name");
+    fprintf(file, "%-20s", "Full Name");
     for (int j = 0; j < NUM_COURSES; j++) {
-        fprintf(file, "%-35s", students[0].courses[j].name);
+        fprintf(file, "%-15s", "Grade");
     }
     fprintf(file, "%-10s\n", "Average");
     
+    // Write course names on second line
+    fprintf(file, "%20s", "");
+    for (int j = 0; j < NUM_COURSES; j++) {
+        fprintf(file, "%-15s", students[0].courses[j].name);
+    }
+    fprintf(file, "\n");
+    
     // Write separator line
-    for (int i = 0; i < 30 + 35 * NUM_COURSES + 10; i++) {
+    for (int i = 0; i < 20 + 15 * NUM_COURSES + 10; i++) {
         fprintf(file, "-");
     }
     fprintf(file, "\n");
     
     // Write student data
     for (int i = 0; i < n; i++) {
-        fprintf(file, "%-30s", students[i].fullName);
+        fprintf(file, "%-20s", students[i].fullName);
         
         for (int j = 0; j < NUM_COURSES; j++) {
-            fprintf(file, "%-35.2f", students[i].courses[j].grade);
+            fprintf(file, "%-15.2f", students[i].courses[j].grade);
         }
         
         fprintf(file, "%-10.2f\n", students[i].average);
@@ -180,25 +187,27 @@ void saveToFile(Student *students, int n, const char *filename) {
 void displayStudentData(Student *students, int n) {
     printf("\n===== Student Records =====\n");
     
-    // Display header
-    printf("%-30s", "Full Name");
-    for (int j = 0; j < NUM_COURSES; j++) {
-        printf("%-35s", students[0].courses[j].name);
-    }
+    // Display header with shortened course names
+    printf("%-20s", "Full Name");
+    printf("%-15s", "Data Struct");
+    printf("%-15s", "Mobile App");
+    printf("%-15s", "C#");
+    printf("%-15s", "Machine Learn");
+    printf("%-15s", "Blockchain");
     printf("%-10s\n", "Average");
     
     // Display separator line
-    for (int i = 0; i < 30 + 35 * NUM_COURSES + 10; i++) {
+    for (int i = 0; i < 20 + 15 * NUM_COURSES + 10; i++) {
         printf("-");
     }
     printf("\n");
     
     // Display student data
     for (int i = 0; i < n; i++) {
-        printf("%-30s", students[i].fullName);
+        printf("%-20s", students[i].fullName);
         
         for (int j = 0; j < NUM_COURSES; j++) {
-            printf("%-35.2f", students[i].courses[j].grade);
+            printf("%-15.2f", students[i].courses[j].grade);
         }
         
         printf("%-10.2f\n", students[i].average);
