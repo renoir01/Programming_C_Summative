@@ -1,3 +1,11 @@
+/*
+ * Student Records System
+ * 
+ * This program manages records for students, storing their grades for
+ * five specified courses. It demonstrates the use of structures, file I/O,
+ * and data management techniques.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -26,6 +34,9 @@ void displayStudentData(Student *students, int n);
 
 int main() {
     int n;
+    
+    printf("===== Student Records System =====\n");
+    printf("This system manages grades and performance data for students.\n\n");
     
     // Get the number of students
     do {
@@ -82,7 +93,7 @@ int main() {
 }
 
 void inputStudentData(Student *students, int n) {
-    printf("\n--- Enter Student Data ---\n");
+    printf("\n===== Enter Student Data =====\n");
     
     for (int i = 0; i < n; i++) {
         printf("\nStudent %d:\n", i + 1);
@@ -167,7 +178,7 @@ void saveToFile(Student *students, int n, const char *filename) {
 }
 
 void displayStudentData(Student *students, int n) {
-    printf("\n--- Student Records ---\n");
+    printf("\n===== Student Records =====\n");
     
     // Display header
     printf("%-30s", "Full Name");
