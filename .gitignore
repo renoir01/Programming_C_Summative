@@ -1,0 +1,21 @@
+# Compiled files
+*.o
+*.out
+*.exe
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*~
+
+# Build directories
+build/
+bin/
+
+# Arduino specific
+.pio
+.pioenvs
+.piolibdeps

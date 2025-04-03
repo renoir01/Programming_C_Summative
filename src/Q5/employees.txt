@@ -1,0 +1,7 @@
+Name,Email,Department,Age,Experience,Salary
+----,-----,----------,---,----------,------
+iteka,renoirk@gmail.com,IoT Systems,64,45,499000.00
+espoir,espoir@gmail.com,Crop Monitoring,34,43,4343434.00
+kaze,kaze@gmail.com,Soil Analysis,54,14,500.00
+iteka,reno@gmail.com,Soil Analysis,54,5,4545.00
+kaze renoir,renoir@gmail.com,Crop Monitoring,54,3,100.00
